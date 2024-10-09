@@ -1,0 +1,27 @@
+# vars.yml 
+---
+
+# PVE Template Provisioning Variables
+template_name:  2022STD-new #tempalte Name
+pve_storage_id: VM-drives # Prxmox Storage location, Default: local
+vm_cores: 2
+vm_sockets: 2
+vm_memory_mb: 2048
+vm_os_type: win10
+# vm_os_type must be valid value per https://pve.proxmox.com/wiki/Qemu/KVM_Virtual_Machines
+drive_size_gb: 50
+start_at_boot: no
+os_iso_location: local:iso/SW_DVD9_Win_Server_STD_CORE_2022_64Bit_English_DC_STD_MLF_X23-78027.ISO
+format: qcow2
+# qcow2 or raw if on lvm
+agent: enabled=1
+# Enable with: 'enabled=1,fstrim_cloned_disks=1,type=virtio'
+
+# Unattend.xml template variables:
+deploy_image: 'Windows Server 2022 SERVERSTANDARD'
+# Applicable 2019 options for deploy_image: 
+# Windows Server 2019 SERVERDATACENTER, Windows Server 2019 SERVERDATACENTERCORE,
+# Windows Server 2019 SERVERSTANDARD, Windows Server 2019 SERVERSTANDARDCORE
+vm_admin_pass: "your password"
+vm_time_zone: 'Romance Standard Time'  #Time Zone
+org_name: 'Your Org' #Your Organization 
