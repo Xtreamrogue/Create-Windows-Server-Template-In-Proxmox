@@ -149,7 +149,7 @@
                     <Description>Configure Ansible Prep and WinRM</Description>
                     <Order>5</Order>
                 </SynchronousCommand>   
-                <SynchronousCommand wcm:action="add">
+                <!-- <SynchronousCommand wcm:action="add">
                     <CommandLine>powershell -File e:\scripts\win-updates-pass1.ps1</CommandLine>
                     <Description>Install Get-WindowsUpdate module and Windows Updates Pass 1</Description>
                     <Order>6</Order>
@@ -162,8 +162,8 @@
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>powershell -File e:\scripts\win-updates-pass2.ps1</CommandLine>
                     <Description>Install Windows Updates Pass 2</Description>
-                    <Order>8</Order>
-                </SynchronousCommand>
+                    <Order>8</Order> 
+                </SynchronousCommand> -->
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>powershell Start-Sleep -Seconds 25</CommandLine>
                     <Description>Insert a pause to prevent possible reboot during sysprep</Description>
@@ -195,7 +195,7 @@
 					<Description>Enable WinRM</Description>	
 				</SynchronousCommand>
 				<SynchronousCommand wcm:action="add">
-					<CommandLine>cmd.exe copy e:\scripts\unattend.xml c:\windows\system32\sysprep\</CommandLine>
+					<CommandLine>cmd.exe /c E:\scripts\copy.bat</CommandLine>
 					<Order>15</Order>
 					<Description>Copy unattend xml for auto login </Description>	
 				</SynchronousCommand>					

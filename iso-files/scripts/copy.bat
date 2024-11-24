@@ -1,0 +1,1 @@
+copy e:\scripts\unattend.xml c:\windows\system32\sysprep\
